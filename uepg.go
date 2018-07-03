@@ -64,8 +64,7 @@ func (client Client) Grade() ([]string, [][]string) {
 
   var table [][]string
   for i:=0; i<  len(contents); i+=11 {
-    table = append(table, []string{contents[i], contents[i+1], contents[i+2], contents[i+3],
-    contents[i+4], contents[i+5], contents[i+6], contents[i+7], contents[i+8], contents[i+9], contents[i+10]})
+    table = append(table, contents[i:i+11])
   }
 
   return header, table
